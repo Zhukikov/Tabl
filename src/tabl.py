@@ -50,8 +50,8 @@ class Tabl:
             for j in range(len(lis[i])):
                 if len(result) < j + 1:
                     result += [0]
-                if result[j] < len(lis[i][j]):
-                    result[j] = len(lis[i][j])
+                if result[j] < len(str(lis[i][j])):
+                    result[j] = len(str(lis[i][j]))
         return result
 
     def _print_hor_div(self, row):
@@ -74,8 +74,8 @@ class Tabl:
         if el_count > 0:
             result += self.ver
             for i in range(el_count):
-                result += row[i]
-                result += ' ' * (sizes[i] - len(row[i]))
+                result += str(row[i])
+                result += ' ' * (sizes[i] - len(str(row[i])))
                 result += self.ver
             result += '\n'
 

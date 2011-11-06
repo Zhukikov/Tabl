@@ -112,5 +112,16 @@ class TestTabl(unittest.TestCase):
                          '| ||\n' + \
                          '+-++\n', string)
 
+    def test_numbers_in_lists(self):
+        """Should print table and not raise an exception."""
+        tab = tabl.Tabl()
+        try:
+            string = tab.to_table([['a', 1.6]])
+            self.assertEqual('+-+---+\n' + \
+                             '|a|1.6|\n' + \
+                             '+-+---+\n', string)
+        except TypeError:
+            self.fail()
+
 if __name__ == '__main__':
     unittest.main()

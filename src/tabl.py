@@ -1,4 +1,4 @@
-# Copyright (c) 2011 Andrejs Muzikovs
+# Copyright (c) 2011-2013 Andrejs Muzikovs
 # This code is licensed under MIT license (see LICENSE for details)
 
 """Tabl module."""
